@@ -20,3 +20,8 @@ SpMorphicWorldAdapter >> buildWidget [
 
 	^ self presenter currentWorld 
 ]
+
+{ #category : #api }
+SpMorphicWorldAdapter >> centered [
+	"Do nothing. I will fill the full world"
+]
