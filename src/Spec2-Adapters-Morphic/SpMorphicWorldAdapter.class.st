@@ -18,5 +18,5 @@ SpMorphicWorldAdapter >> addPresenterIn: widgetToBuild withSpecLayout: aSpec [
 { #category : #factory }
 SpMorphicWorldAdapter >> buildWidget [
 
-	^ self currentWorld 
+	^ self presenter currentWorld 
 ]
