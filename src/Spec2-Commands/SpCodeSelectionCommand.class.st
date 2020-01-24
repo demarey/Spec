@@ -5,7 +5,7 @@ In case no text is selected, the commands will take the text from cursor positio
 "
 Class {
 	#name : #SpCodeSelectionCommand,
-	#superclass : #SpCodeCommand,
+	#superclass : #SpToolCommand,
 	#category : #'Spec2-Commands-Code'
 }
 
@@ -34,21 +34,8 @@ SpCodeSelectionCommand >> evaluate: aString andDo: aBlock [
 SpCodeSelectionCommand >> evaluateSelectionAndDo: aBlock [
 	"Treat the current selection as an expression; evaluate it and invoke aBlock with the result.
 	If no selection is present select the current line."
+
 	| selection |
-
-	selection := self selection ifEmpty: [ ^ '' ].
-	^ self 
-		evaluate: selection 
-		andDo: aBlock
-]
-
-{ #category : #accessing }
-SpCodeSelectionCommand >> selection [
-	^context selectedText
-]
-
-{ #category : #accessing }
-SpCodeSelectionCommand >> selectionOrLine [
-	
-	^ context selectionOrLine
+	selection := context selectionInterval ifEmpty: [ ^ '' ].
+	^ self evaluate: selection andDo: aBlock
 ]
