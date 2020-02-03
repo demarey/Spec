@@ -82,16 +82,10 @@ SpWorldPresenter >> openWithSpecLayout: aSpec [
 ]
 
 { #category : #private }
-SpWorldPresenter >> title: aString [
-
-	^ DisplayScreen hostWindowTitle: aString
-]
-
-{ #category : #private }
 SpWorldPresenter >> updateTitle [
 	"Update the window title"
 
-	DisplayScreen hostWindowTitle: self title
+	self adapter ifNotNil: [ :worldAdapter | worldAdapter title: self title ]
 ]
 
 { #category : #api }
