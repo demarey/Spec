@@ -18,7 +18,10 @@ SpMorphicWorldAdapter >> addPresenterIn: widgetToBuild withSpecLayout: aSpec [
 { #category : #factory }
 SpMorphicWorldAdapter >> buildWidget [
 
-	^ self presenter currentWorld 
+	^ self presenter currentWorld
+		borderColor: self theme borderColor;
+		borderWidth: 4;
+		yourself
 ]
 
 { #category : #api }
