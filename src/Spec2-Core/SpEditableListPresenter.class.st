@@ -218,6 +218,15 @@ SpEditableListPresenter >> moveElementAt: index to: newIndex [
 	self list selectIndex: newIndex
 ]
 
+{ #category : #initialization }
+SpEditableListPresenter >> newList [
+	"Default list collection is an Array.
+	As this presenter aims to add / remove items from the list, we need a growable collection"
+	^ (self instantiate: SpListPresenter)
+			items: OrderedCollection new;
+			yourself
+]
+
 { #category : #api }
 SpEditableListPresenter >> okAction: aBlock [
 
@@ -252,8 +261,13 @@ SpEditableListPresenter >> removeItemBlock: aBlock [
 ]
 
 { #category : #api }
-SpEditableListPresenter >> selectItem: anIndex [
-	list selectItem: anIndex
+SpEditableListPresenter >> selectIndex: anIndex [
+	list selectIndex: anIndex
+]
+
+{ #category : #api }
+SpEditableListPresenter >> selectItem: anObject [
+	list selectItem: anObject
 ]
 
 { #category : #api }
