@@ -1,3 +1,7 @@
+"
+I browse a class that is returned from the evaluation of my context.
+My context must be a block that returns a class.
+"
 Class {
 	#name : #SpBrowseClassCommand,
 	#superclass : #SpSystemNavigationCommand,
@@ -5,14 +9,8 @@ Class {
 }
 
 { #category : #default }
-SpBrowseClassCommand class >> defaultIconName [
-	^#smallSystemBrowser
-]
-
-{ #category : #default }
-SpBrowseClassCommand class >> defaultName [
-
-	^ 'Browse class'
+SpBrowseClassCommand class >> defaultDescription [
+	^ 'Browse the selected class'
 ]
 
 { #category : #default }
@@ -21,6 +19,12 @@ SpBrowseClassCommand class >> defaultShortcutKey [
 	^ $b command mac 
 		| $b control win
 		| $b control unix
+]
+
+{ #category : #default }
+SpBrowseClassCommand class >> shortName [
+
+	^ 'class'
 ]
 
 { #category : #execution }

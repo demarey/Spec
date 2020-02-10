@@ -80,7 +80,7 @@ SpApplication class >> example2 [
 	"You want to subclass SpApplication to create your app"
 	app := SpApplication new.
 	"You want to subclass SpGtkConfiguration to create your own cofiguration"
-	app useBackend: #Gtk with: SpGtkConfiguration new.
+	app useBackend: #Gtk with: SpApplicationConfiguration new.
 	app run
 ]
 
@@ -299,6 +299,14 @@ SpApplication >> selectFileTitle: aString [
 { #category : #running }
 SpApplication >> start [ 
 	"Override this to start your app"
+]
+
+{ #category : #accessing }
+SpApplication >> topWindow [
+
+	^ self windows 
+		detect: [ :each | each isTopWindow ]
+		ifNone: [ nil ]
 ]
 
 { #category : #'accessing backend' }
