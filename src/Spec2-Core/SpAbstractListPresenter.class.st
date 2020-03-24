@@ -158,7 +158,8 @@ SpAbstractListPresenter >> items: aCollection [
 	aCollection is a collection of your domain specific items.
 	This creates a collection model"
 	
-	model collection: aCollection
+	model collection: aCollection.
+	self unselectAll.
 ]
 
 { #category : #private }
