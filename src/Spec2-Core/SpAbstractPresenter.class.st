@@ -186,17 +186,18 @@ SpAbstractPresenter >> buildWithSpec [
 ]
 
 { #category : #building }
-SpAbstractPresenter >> buildWithSpec: aSpec [
-	"Build the widget using the spec name provided as argument"
-
-	^ self buildWithSpecLayout: (self retrieveSpec: aSpec)
-]
-
-{ #category : #building }
 SpAbstractPresenter >> buildWithSpecLayout: aSpecLayout [
 	"Build the widget using the spec name provided as argument"
 
 	^ (self buildAdapterWithSpecLayout: aSpecLayout) widget
+]
+
+{ #category : #building }
+SpAbstractPresenter >> buildWithSpecSelector: aSelector [
+	"Build the widget using the layout returned by the evaluation 
+	of the selector name provided as argument"
+
+	^ self buildWithSpecLayout: (self retrieveSpec: aSelector)
 ]
 
 { #category : #'private - showing' }

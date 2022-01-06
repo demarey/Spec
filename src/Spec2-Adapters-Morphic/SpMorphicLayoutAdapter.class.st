@@ -69,7 +69,7 @@ SpMorphicLayoutAdapter >> basicAdd: aPresenter constraints: constraints to: aPan
 SpMorphicLayoutAdapter >> buildMorph: aPresenter constraints: constraints [ 
 	| childMorph |
 	
-	childMorph := aPresenter buildWithSpec: constraints spec.
+	childMorph := aPresenter buildWithSpecSelector: constraints spec.
 	aPresenter adapter 
 		ifNotNil: [ :anAdapter | anAdapter applyStyle ].
 
@@ -97,7 +97,7 @@ SpMorphicLayoutAdapter >> buildWithSpec [
 ]
 
 { #category : #building }
-SpMorphicLayoutAdapter >> buildWithSpec: aString [ 
+SpMorphicLayoutAdapter >> buildWithSpecSelector: aSelector [ 
 
 	^ self buildWithSpec
 ]
