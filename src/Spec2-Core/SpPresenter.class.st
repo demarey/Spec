@@ -791,9 +791,9 @@ SpPresenter >> resolveSymbol: aSymbol [
 ]
 
 { #category : #api }
-SpPresenter >> retrieveSpec: aSelector [
+SpPresenter >> retrieveLayout: aSelector [
 
-	^ layout ifNil: [ super retrieveSpec: aSelector ]
+	^ layout ifNil: [ super retrieveLayout: aSelector ]
 ]
 
 { #category : #'accessing - model' }
