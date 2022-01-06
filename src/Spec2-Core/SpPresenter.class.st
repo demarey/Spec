@@ -401,12 +401,6 @@ SpPresenter >> defaultKeyboardFocus [
 	^ self
 ]
 
-{ #category : #specs }
-SpPresenter >> defaultSpec [
-
-	^ self class perform: self defaultSpecSelector
-]
-
 { #category : #accessing }
 SpPresenter >> defer: aBlock [
 

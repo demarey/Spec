@@ -215,22 +215,13 @@ SpAbstractPresenter >> defaultDialogWindowPresenterClass [
 { #category : #initialization }
 SpAbstractPresenter >> defaultLayout [
 	
-	^ self retrieveLayout: self defaultSpecSelector
+	^ self retrieveLayout: #defaultSpec
 ]
 
 { #category : #'private - showing' }
 SpAbstractPresenter >> defaultModalWindowPresenterClass [
 		
 	^ self application defaultModalWindowPresenterClass
-]
-
-{ #category : #'private - building' }
-SpAbstractPresenter >> defaultSpecSelector [
-	(Pragma allNamed: #spec: from: self class class to: SpAbstractPresenter class class) detect: [ :each | (each argumentAt: 1) = #default ] ifFound: [ :pragma | ^ pragma methodSelector ].
-
-	^ (Pragma allNamed: #spec from: self class class to: SpAbstractPresenter class class)
-		ifEmpty: [ #defaultSpec ]
-		ifNotEmpty: [ :pragmas | pragmas size = 1 ifTrue: [ pragmas first methodSelector ] ifFalse: [ #defaultSpec ] ]
 ]
 
 { #category : #'private - showing' }
