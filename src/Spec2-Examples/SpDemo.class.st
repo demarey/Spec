@@ -42,7 +42,7 @@ SpDemo class >> open [
 	<example>
 	
 	^ self new
-		openWithSpec
+		open
 ]
 
 { #category : #accessing }

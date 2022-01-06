@@ -61,7 +61,7 @@ SpBaseTest >> initializeTestedInstance [
 
 { #category : #utilities }
 SpBaseTest >> openInstance [
-	window ifNil: [ window := presenter openWithSpec ]
+	window ifNil: [ window := presenter open ]
 ]
 
 { #category : #accessing }

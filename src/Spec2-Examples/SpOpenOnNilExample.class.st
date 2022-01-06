@@ -26,7 +26,7 @@ SpOpenOnNilExample class >> example [
 	<sampleInstance>
 	^ self new
 		extent: 200 @ 100;
-		openWithSpec;
+		open;
 		yourself
 ]
 

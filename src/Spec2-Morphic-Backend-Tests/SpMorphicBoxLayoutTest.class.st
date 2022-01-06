@@ -81,7 +81,7 @@ SpMorphicBoxLayoutTest >> testBeHomogeneous [
 	p3 items: #(one two three).
 
 	[ 
-		presenter openWithSpec.
+		presenter open.
 	 	backend waitUntilUIRedrawed ]
 	ensure: [ presenter withWindowDo: #close ].		
 
@@ -113,7 +113,7 @@ SpMorphicBoxLayoutTest >> testBeHomogeneousWorksWhenContractingWindow [
 	p3 items: #(one two three).
 
 	[ 
-		presenter openWithSpec.
+		presenter open.
 		backend waitUntilUIRedrawed.
 		presenter withWindowDo: [ :window |
 			window adapter widgetDo: [ :widget |
@@ -150,7 +150,7 @@ SpMorphicBoxLayoutTest >> testBeHomogeneousWorksWhenExpandingWindow [
 	p3 items: #(one two three).
 
 	[ 
-		presenter openWithSpec.
+		presenter open.
 		backend waitUntilUIRedrawed.
 		presenter withWindowDo: [ :window |
 			window adapter widgetDo: [ :widget |
@@ -174,7 +174,7 @@ SpMorphicBoxLayoutTest >> testClassIsDisplayedWithCorrectAlignment [
 	| presenter table |
 
 	presenter := SpBoxLayoutWithTableForTestPresenter new.
-	instance := presenter openWithSpec.
+	instance := presenter open.
 
 	table := presenter table adapter widget.
 	self assert: instance window left <= table left.

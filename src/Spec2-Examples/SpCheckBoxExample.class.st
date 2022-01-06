@@ -32,7 +32,7 @@ SpCheckBoxExample class >> defaultSpec [
 { #category : #examples }
 SpCheckBoxExample class >> example [
 	<sampleInstance>
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #specs }

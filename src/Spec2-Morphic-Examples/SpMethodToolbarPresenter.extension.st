@@ -9,6 +9,6 @@ SpMethodToolbarPresenter class >> example [
 		method: SpButtonPresenter >> #state:;
 		method: nil;
 		extent: 550 @ 100;
-		openWithSpec.
+		open.
 		^example 
 ]

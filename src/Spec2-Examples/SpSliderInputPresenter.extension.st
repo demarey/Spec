@@ -9,7 +9,7 @@ SpSliderInputPresenter class >> example [
 		max: 250;
 		value: 120;
 		extent: 400 @ 50;
-		openWithSpec.
+		open.
 	example withWindowDo: [ :window | window title: 'SliderInput example' ].
 	^ example
 ]

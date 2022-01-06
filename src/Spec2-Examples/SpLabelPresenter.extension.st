@@ -6,5 +6,5 @@ SpLabelPresenter class >> example [
 
 	^ self new
 		label: 'Label example';
-		openWithSpec.
+		open.
 ]

@@ -39,7 +39,7 @@ SpTablePresenterTest >> testGivenSortingIsActiveWhenAffectingNewItemsThenNewItem
 	[ presenter
 		addColumn: (SpStringTableColumn title: ' i ' evaluated: #value);
 		addColumn: (SpStringTableColumn title: ' 1 / i ' evaluated: [ :item | (1 / item) value ]) beSortable;
-		openWithSpec;
+		open;
 		selectIndex: 1.
 
 	"sort by 1/i ascending"
@@ -77,7 +77,7 @@ SpTablePresenterTest >> testSelectedItemsReturnsRightElementAfterSortingOfElemen
 	[ presenter
 		addColumn: (SpStringTableColumn title: ' i ' evaluated: #value);
 		addColumn: (SpStringTableColumn title: ' 1 / i ' evaluated: [ :item | (1 / item) value ]) beSortable;
-		openWithSpec;
+		open;
 		selectIndex: 1. "10"
 		
 	"sort by 1/i ascending"

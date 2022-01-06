@@ -4,7 +4,7 @@ Extension { #name : #SpDatePresenter }
 SpDatePresenter class >> example [
 	<sampleInstance>
 	
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #'*Spec2-Morphic-Examples' }

@@ -29,7 +29,7 @@ SpInitializeWindowExample class >> defaultSpec [
 SpInitializeWindowExample class >> show [
 	<script>
 
-	self new openWithSpec
+	self new open
 ]
 
 { #category : #'private - building' }

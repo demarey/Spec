@@ -9,7 +9,7 @@ SpMorphicWindowAdapterTest >> testOpenWidgetPresenterAppliesStyle [
 	| presenter window |
 
 	presenter := SpTextPresenter new.
-	[ window := presenter openWithSpec ]
+	[ window := presenter open ]
 	ensure: [ window close ].
 	
 	self 
@@ -18,7 +18,7 @@ SpMorphicWindowAdapterTest >> testOpenWidgetPresenterAppliesStyle [
 	
 	presenter := SpTextPresenter new.
 	presenter addStyle: 'code'.
-	[ window := presenter openWithSpec ]
+	[ window := presenter open ]
 	ensure: [ window close ].
 
 	self 

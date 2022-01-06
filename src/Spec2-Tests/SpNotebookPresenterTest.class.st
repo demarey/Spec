@@ -85,7 +85,7 @@ SpNotebookPresenterTest >> testRemoveAllDoesNotSelectsAnyPage [
 	self assert: presenter pages size equals: 2.
 	
 	"it needs to be open"
-	[ presenter openWithSpec ]
+	[ presenter open ]
 	ensure: [ presenter withWindowDo: #close ].
 	
 	presenter selectPage: page1.

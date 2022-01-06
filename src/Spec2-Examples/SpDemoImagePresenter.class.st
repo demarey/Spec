@@ -36,7 +36,7 @@ SpDemoImagePresenter class >> defaultSpec [
 { #category : #'instance creation' }
 SpDemoImagePresenter class >> open [
 	<script>
-	self new openWithSpec
+	self new open
 ]
 
 { #category : #accessing }

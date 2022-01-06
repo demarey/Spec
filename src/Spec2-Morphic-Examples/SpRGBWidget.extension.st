@@ -6,7 +6,7 @@ SpRGBWidget class >> example [
 	| example |
 	example := self new
 		extent: 300 @ 250;
-		openWithSpec;
+		open;
 		yourself.
 	example withWindowDo: [ :window | window title: 'RGBWidget example' ].
 	^ example

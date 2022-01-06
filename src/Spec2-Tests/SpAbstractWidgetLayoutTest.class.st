@@ -34,14 +34,14 @@ SpAbstractWidgetLayoutTest >> testDynamicBuild [
 
 	| model widget1 widget2 widget3 |
 	model := SpTestingPresenter new.
-	model openWithSpec close.
+	model open close.
 	widget1 := model list adapter.
-	model openWithSpec close.
+	model open close.
 	widget2 := model list adapter.
 	self deny: widget1 identicalTo: widget2.
 	model list needRebuild: false.
 	model needRebuild: false.
-	model openWithSpec close.
+	model open close.
 	widget3 := model list adapter.
 	self assert: widget2 identicalTo: widget3.
 	self assert: model needRebuild

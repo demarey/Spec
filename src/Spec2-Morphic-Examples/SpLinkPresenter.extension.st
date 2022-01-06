@@ -9,7 +9,7 @@ SpLinkPresenter class >> example [
 		url: 'https://pharo.org';
 		label: 'Pharo website';
 		extent: 200 @ 20;
-		openWithSpec;
+		open;
 		yourself.
 
 	example withWindowDo: [ :w | w title: 'Link presenter' ].

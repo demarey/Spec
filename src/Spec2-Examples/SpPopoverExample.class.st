@@ -36,7 +36,7 @@ SpPopoverExample class >> defaultSpec [
 SpPopoverExample class >> open [
 	<script>
 
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #initialization }

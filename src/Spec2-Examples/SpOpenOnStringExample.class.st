@@ -60,7 +60,7 @@ SpOpenOnStringExample class >> example [
 	<sampleInstance>
 	^ (self new: 'Hello world')
 		extent: 300 @ 200;
-		openWithSpec;
+		open;
 		yourself
 ]
 

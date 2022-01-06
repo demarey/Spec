@@ -30,7 +30,7 @@ SpToolbarToggleButtonExample class >> defaultSpec [
 { #category : #examples }
 SpToolbarToggleButtonExample class >> example [
 
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #specs }

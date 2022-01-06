@@ -18,7 +18,7 @@ SpComposablePresenterWithAdditionalSubpresentersTest >> testOpening [
 	| aPresenter |
 
 	aPresenter := application newPresenter: SpTestingPresenterWithAdditionalPresenters.
-	aPresenter openWithSpec.
+	aPresenter open.
 	#(subpresenter1 subpresenter2 subpresenter3) do: [ :aKey | 
 		self 
 			assert: (aPresenter additionalSubpresentersMap at: aKey) owner 

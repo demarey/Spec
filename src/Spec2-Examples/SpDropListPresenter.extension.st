@@ -8,7 +8,7 @@ SpDropListPresenter class >> example [
 		items: SpPresenter withAllSubclasses;
 		display: [ :aClass | aClass name ];
 		whenSelectedItemChangedDo: [ :aClass | aClass crTrace ];
-		openWithSpec)
+		open)
 		extent: 400@25;
 		yourself
 ]

@@ -26,7 +26,7 @@ SpScrollSyncExample class >> defaultSpec [
 { #category : #examples }
 SpScrollSyncExample class >> example [
 	<sampleInstance>
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #specs }

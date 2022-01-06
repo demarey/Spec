@@ -24,7 +24,7 @@ SpApplicationWithToolbar class >> defaultSpec [
 { #category : #examples }
 SpApplicationWithToolbar class >> example [
 	<sampleInstance>
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #initialization }

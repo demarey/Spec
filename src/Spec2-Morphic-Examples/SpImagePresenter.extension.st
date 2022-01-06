@@ -6,5 +6,5 @@ SpImagePresenter class >> example [
 
 	^ self new 
 		image: (self iconNamed: #pharoBig);
-		openWithSpec
+		open
 ]

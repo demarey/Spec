@@ -32,7 +32,7 @@ SpDropListPresenterTest >> testEmptyList [
 	presenter items: #($a $b $c).
 	presenter selectItem: $a.
 	
-	[ presenter openWithSpec ] 
+	[ presenter open ] 
 	ensure: [ presenter withWindowDo: #close ].
 	presenter emptyList.
 	
@@ -48,7 +48,7 @@ SpDropListPresenterTest >> testSetItemsWithCollectionSmallerThanSelection [
 	presenter items: #($a $b $c).
 	presenter selectItem: $c.
 	
-	[ presenter openWithSpec ] 
+	[ presenter open ] 
 	ensure: [ presenter withWindowDo: #close ].
 	presenter items: #($a).
 
@@ -63,7 +63,7 @@ SpDropListPresenterTest >> testSetItemsWithEmptyCollection [
 	presenter items: #($a $b $c).
 	presenter selectItem: $a.
 	
-	[ presenter openWithSpec ] 
+	[ presenter open ] 
 	ensure: [ presenter withWindowDo: #close ].
 	presenter items: #().
 	

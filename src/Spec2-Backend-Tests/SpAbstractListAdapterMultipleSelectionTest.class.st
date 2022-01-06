@@ -77,7 +77,7 @@ SpAbstractListAdapterMultipleSelectionTest >> testSelectPresenterWithScrollingMa
 	presenter
 		items: (1 to: 200);
 		selectIndex: 150 scrollToSelection: true;
-		openWithSpec.
+		open.
 		
 	visibleItems := presenter verticalAlignment firstVisibleRowIndex to: presenter verticalAlignment lastVisibleRowIndex.
 		
@@ -98,7 +98,7 @@ SpAbstractListAdapterMultipleSelectionTest >> testSelectPresenterWithoutScrollin
 	presenter 
 		items: (1 to: 200);
 		selectIndex: 150 scrollToSelection: true;
-		openWithSpec.
+		open.
 
 	verticalAlignment := presenter verticalAlignment.		
 	visibleItems := verticalAlignment firstVisibleRowIndex to: verticalAlignment lastVisibleRowIndex.

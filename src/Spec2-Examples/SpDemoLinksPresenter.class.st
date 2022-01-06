@@ -29,7 +29,7 @@ SpDemoLinksPresenter class >> defaultSpec [
 { #category : #'instance creation' }
 SpDemoLinksPresenter class >> open [
 	<script>
-	self new openWithSpec
+	self new open
 ]
 
 { #category : #initialization }

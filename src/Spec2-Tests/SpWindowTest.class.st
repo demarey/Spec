@@ -19,7 +19,7 @@ SpWindowTest >> testAboutText [
 	windowPresenter close.
 
 	presenter := SpTextPresenter new.
-	[ window := presenter openWithSpec.
+	[ window := presenter open.
 	presenter withWindowDo: [ :w | w aboutText: 'test2' ].
 	self assert: presenter window aboutText equals: 'test2' ]
 		ensure: [ window ifNotNil: #delete ]
@@ -29,7 +29,7 @@ SpWindowTest >> testAboutText [
 SpWindowTest >> testCloseWindowRemovesItFromApplicationWindowCollection [
 	| application |
 	application := SpApplication new.
-	windowPresenter := (application newPresenter: SpButtonPresenter) openWithSpec.
+	windowPresenter := (application newPresenter: SpButtonPresenter) open.
 	windowPresenter window close.
 	self deny: (application windows includes: windowPresenter).
 	self assert: application windows isEmpty.
@@ -39,7 +39,7 @@ SpWindowTest >> testCloseWindowRemovesItFromApplicationWindowCollection [
 SpWindowTest >> testIsDisplayed [
 	"Test for case: 16800 -> ask a SpecWindow for #isDisplayed always returns true"
 	
-	windowPresenter := SpTextPresenter new openWithSpec.
+	windowPresenter := SpTextPresenter new open.
 	self assert: (windowPresenter isDisplayed).
 	
 	windowPresenter window minimize.	
@@ -54,14 +54,14 @@ SpWindowTest >> testIsDisplayed [
 { #category : #tests }
 SpWindowTest >> testTitle [
 	| presenter window |
-	windowPresenter := SpTextPresenter new openWithSpec.
+	windowPresenter := SpTextPresenter new open.
 
 	self assert: windowPresenter isDisplayed.
 	self assert: windowPresenter title equals: 'Text'.
 	windowPresenter close.
 
 	presenter := SpTextPresenter new.
-	[ window := presenter openWithSpec.
+	[ window := presenter open.
 	presenter withWindowDo: [ :w | w title: 'Test Window' ].
 	self assert: presenter window title equals: 'Test Window' ]
 		ensure: [ window ifNotNil: #delete ]

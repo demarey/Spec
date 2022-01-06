@@ -32,7 +32,7 @@ SpMethodBrowser class >> example [
 	| example |
 	example := SpMethodBrowser new.
 	example methods: Object methods;
-	 openWithSpec.
+	 open.
 	^example
 ]
 

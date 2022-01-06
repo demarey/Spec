@@ -76,7 +76,7 @@ SpCodePopoverPrintPresenterTest >> testPopoverPopupTextTakesExtentFromPresenter 
 	| window popover string naturalSize |
 
 	[
-		window := SpLabelPresenter new openWithSpec.
+		window := SpLabelPresenter new open.
 		string := String loremIpsum withNoLineLongerThan: 80.
 		presenter := SpCodePopoverPrintPresenter on: string.
 		popover := window presenter newPopover

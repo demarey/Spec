@@ -13,7 +13,7 @@ SpSingleSelectionModeTest >> testDropListSelectionIsNotAffectedBySorting [
 	presenter 
 		items: (1 to: 10) asArray;
 		selectIndex: 3;
-		openWithSpec.
+		open.
 		
 	self assert: presenter selection selectedItem model equals: 3
 ]
@@ -38,7 +38,7 @@ SpSingleSelectionModeTest >> testGetRightElementAfterSortingOfElementsChanged [
 	presenter 
 		items: (1 to: 10) asArray;
 		beSingleSelection;
-		openWithSpec.
+		open.
 	
 	presenter 
 		withAdapterDo: [ :adapter | adapter widget dataSource sortElements: [ :a :b | a > b ] ];
@@ -51,7 +51,7 @@ SpSingleSelectionModeTest >> testGetRightElementAfterSortingOfElementsChanged [
 SpSingleSelectionModeTest >> testSelectionIsResetAfterItemsAssignment [
 	presenter
 		beSingleSelection;
-		openWithSpec;
+		open;
 		selectIndex: 1.
 
 	presenter items: #(2 5).
@@ -67,7 +67,7 @@ SpSingleSelectionModeTest >> testSelectionIsResetAfterSorting [
 	presenter
 		items: (1 to: 10) asArray;
 		beSingleSelection;
-		openWithSpec;
+		open;
 		selectIndex: 1.
 		
 	presenter

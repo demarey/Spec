@@ -10,7 +10,7 @@ SpMultipleSelectionModeTest >> testGetRightElementAfterSortingOfElementsChanged 
 	presenter 
 		items: (1 to: 10) asArray;
 		beMultipleSelection;
-		openWithSpec.
+		open.
 	
 	presenter 
 		withAdapterDo: [ :adapter | adapter widget dataSource sortElements: [ :a :b | a > b ] ];
@@ -25,7 +25,7 @@ SpMultipleSelectionModeTest >> testGetRightElementAfterSortingOfElementsChanged 
 SpMultipleSelectionModeTest >> testSelectionIsResetAfterItemsAssignment [
 	presenter
 		beMultipleSelection;
-		openWithSpec;
+		open;
 		selectIndexes: #(1 2 3).
 
 	presenter items: #(2 5).
@@ -41,7 +41,7 @@ SpMultipleSelectionModeTest >> testSelectionIsResetAfterSorting [
 	presenter
 		items: (1 to: 10) asArray;
 		beMultipleSelection;
-		openWithSpec;
+		open;
 		selectIndexes: #(1 3).
 		
 	presenter

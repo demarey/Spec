@@ -33,7 +33,7 @@ SpClassMethodBrowser class >> example [
 	example := SpClassMethodBrowser new.
 	example
 		classes: self environment allClasses;
-		openWithSpec.
+		open.
 	^ example
 ]
 

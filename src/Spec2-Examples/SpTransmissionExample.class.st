@@ -28,7 +28,7 @@ SpTransmissionExample class >> defaultSpec [
 SpTransmissionExample class >> open [ 
 	<script>
 	
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #initialization }

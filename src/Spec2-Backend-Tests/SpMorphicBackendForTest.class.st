@@ -114,7 +114,7 @@ SpMorphicBackendForTest >> openInstanceOf: aTest [
 
 	aTest window ifNil: [ 
 		aTest presenter application: app.
-		aTest window: aTest presenter openWithSpec ].
+		aTest window: aTest presenter open ].
 
 	self waitUntilUIRedrawed.
 

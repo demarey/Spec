@@ -36,7 +36,7 @@ SpPopoverPresenterTest >> initializeTestedInstance [
 SpPopoverPresenterTest >> testPopoverPopupTakesExtentFromPresenter [
 
 	[
-		window := SpLabelPresenter new openWithSpec.
+		window := SpLabelPresenter new open.
 		presenter 
 			relativeTo: window;
 			popup.
@@ -52,7 +52,7 @@ SpPopoverPresenterTest >> testPopoverPopupTakesExtentFromPresenter [
 SpPopoverPresenterTest >> testPopoverPopupTextTakesExtentFromPresenter [
 
 	[
-		window := SpLabelPresenter new openWithSpec.
+		window := SpLabelPresenter new open.
 		presenter 
 			bePositionRight;
 			presenter: (presenter newText 

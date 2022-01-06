@@ -27,7 +27,7 @@ SpEventHandlerTest >> testEventIsInstalledDynamically [
 			add: (t2 := presenter newTextInput);
 			yourself).
 
-	presenter openWithSpec.
+	presenter open.
 
 	got := lost := false.
 	t1 eventHandler 
@@ -56,7 +56,7 @@ SpEventHandlerTest >> testEventIsInstalledOnBuild [
 		whenFocusReceivedDo: [ got := true ];
 		whenFocusLostDo: [ lost := true ].
 		
-	presenter openWithSpec.
+	presenter open.
 	
 	t1 takeKeyboardFocus.
 	t2 takeKeyboardFocus.
@@ -80,7 +80,7 @@ SpEventHandlerTest >> testEventIsTransmittedOnText [
 		whenFocusReceivedDo: [ got := true ];
 		whenFocusLostDo: [ lost := true ].
 		
-	presenter openWithSpec.
+	presenter open.
 	
 	t1 takeKeyboardFocus.
 	t2 takeKeyboardFocus.

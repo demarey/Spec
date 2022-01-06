@@ -13,7 +13,7 @@ SpApplicationWithLocaleTest >> testLabel [
 	string := SpTestLocalizedString from: 'string'.
 	label := app newPresenter: SpLabelPresenter.
 	label label: string.	
-	label openWithSpec.
+	label open.
 	self assert: label adapter widget contents equals: 'string[en-US](1)'.
 
 	app locale: (Locale isoLanguage: 'de' isoCountry: 'DE').

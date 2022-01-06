@@ -8,7 +8,7 @@ SpTextInputFieldPresenter class >> example [
 		extent: 300 @ 25;
 		placeholder: 'This is a ghost';
 		text: 'This is a text';
-		openWithSpec
+		open
 ]
 
 { #category : #'*Spec2-Examples' }
@@ -33,7 +33,7 @@ SpTextInputFieldPresenter class >> exampleEntryCompletion [
 		extent: 300 @ 25;
 		placeholder: 'Enter a class name (at least 4 letters)';
 		entryCompletion: entryCompletion;
-		openWithSpec
+		open
 ]
 
 { #category : #'*Spec2-Examples' }
@@ -44,5 +44,5 @@ SpTextInputFieldPresenter class >> examplePassword [
 		bePassword;
 		placeholder: 'This is a ghost';
 		text: 'shhh';
-		openWithSpec
+		open
 ]

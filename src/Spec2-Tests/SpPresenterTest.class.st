@@ -14,7 +14,7 @@ SpPresenterTest >> testAdapterDoesNotRemainsAsDependencyWhenReplacingIt [
 	presenter layout: (SpBoxLayout new add:  SpListPresenter  new; add: SpTextPresenter new; yourself).
 	
 	3 timesRepeat: [ 
-		presenter openWithSpec.
+		presenter open.
 		presenter window close ].
 	
 	self assert: presenter dependents size equals: 1.

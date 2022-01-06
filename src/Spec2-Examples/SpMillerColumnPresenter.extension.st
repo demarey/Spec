@@ -8,5 +8,5 @@ SpMillerColumnPresenter class >> example [
 				items: (1 to: model);
 				yourself ];
 		setRootModel: 10;
-		openWithSpec
+		open
 ]

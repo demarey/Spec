@@ -15,7 +15,7 @@ SpListPresenterHeaderTest >> testHeaderIsHiddenWhenNoTitleIsDefined [
 		
 	self deny: list hasHeaderTitle.
 	[
-		list openWithSpec.
+		list open.
 		MorphicRenderLoop new doOneCycle.
 		self deny: list adapter firstRowIsHeader ]
 	ensure: [ 

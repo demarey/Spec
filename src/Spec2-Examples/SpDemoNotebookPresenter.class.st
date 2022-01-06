@@ -26,7 +26,7 @@ SpDemoNotebookPresenter class >> defaultSpec [
 
 { #category : #examples }
 SpDemoNotebookPresenter class >> example [
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #pages }

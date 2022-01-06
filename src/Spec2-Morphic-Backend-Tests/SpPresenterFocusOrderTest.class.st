@@ -128,7 +128,7 @@ SpPresenterFocusOrderTest >> testCustomFocusOrder [
 		add: (mock thirdPresenter);
 		add: (mock firstPresenter);
 		add: (mock secondPresenter).
-	mock openWithSpec.
+	mock open.
 	
 	"Focus third"
 	self takeKeyboardFocus: mock.
@@ -148,7 +148,7 @@ SpPresenterFocusOrderTest >> testCustomFocusOrder [
 SpPresenterFocusOrderTest >> testFocusRotationBackwards [
 
 	mock := SpMockFocusOrderPresenter new
-		openWithSpec;
+		open;
 		yourself.
 	
 	"Focus first"
@@ -169,7 +169,7 @@ SpPresenterFocusOrderTest >> testFocusRotationBackwards [
 SpPresenterFocusOrderTest >> testFocusRotationForward [
 
 	mock := SpMockFocusOrderPresenter new
-		openWithSpec;
+		open;
 		yourself.
 		
 	"Focus first"
@@ -190,7 +190,7 @@ SpPresenterFocusOrderTest >> testFocusRotationForward [
 SpPresenterFocusOrderTest >> testTakeKeyboardFocus [
 
 	mock := SpMockFocusOrderPresenter new
-		openWithSpec;
+		open;
 		yourself.
 		
 	"Focus first"

@@ -53,7 +53,7 @@ SpTreeAdapterSingleSelectionTest >> testSelectPresenterWithScrollingMakeSelected
 
 	presenter
 		roots: (1 to: 200);
-		openWithSpec.
+		open.
 		
 	presenter selectPath: { 150 } scrollToSelection: true.
 	visibleItems := presenter verticalAlignment firstVisibleRowIndex to: presenter verticalAlignment lastVisibleRowIndex.
@@ -67,7 +67,7 @@ SpTreeAdapterSingleSelectionTest >> testSelectPresenterWithoutScrollingDoesNotSc
 	
 	presenter 
 		roots: (1 to: 200);
-		openWithSpec.
+		open.
 	verticalAlignment := presenter verticalAlignment.		
 	visibleItems := verticalAlignment firstVisibleRowIndex to: verticalAlignment lastVisibleRowIndex.
 	

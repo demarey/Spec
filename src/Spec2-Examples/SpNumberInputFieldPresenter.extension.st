@@ -10,5 +10,5 @@ SpNumberInputFieldPresenter class >> example [
 		minimum: 10;
 		maximum: 30;
 		climbRate: 2;
-		openWithSpec
+		open
 ]

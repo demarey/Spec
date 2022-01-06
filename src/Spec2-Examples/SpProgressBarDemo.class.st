@@ -39,7 +39,7 @@ SpProgressBarDemo class >> defaultSpec [
 SpProgressBarDemo class >> example [
 	<sampleInstance>
 	
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #initialization }

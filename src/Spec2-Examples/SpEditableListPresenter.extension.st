@@ -7,7 +7,7 @@ SpEditableListPresenter class >> example [
 	presenter := self new
 		items: self selectors asOrderedCollection;
 		addItemBlock: [ 1 ];
-		openWithSpec;
+		open;
 		yourself.
 
 	presenter withWindowDo: [ :w | w title: 'Selectors list' ].

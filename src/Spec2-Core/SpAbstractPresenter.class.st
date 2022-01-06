@@ -361,6 +361,12 @@ SpAbstractPresenter >> needRebuild: aBoolean [
 ]
 
 { #category : #showing }
+SpAbstractPresenter >> open [
+
+	^ self asWindow open
+]
+
+{ #category : #showing }
 SpAbstractPresenter >> openBlockedDialogWithSpec [
 	"Build the widget using the default spec and display it into a dialog. 
 	 Beware: this way will not create a real modal in the sense that the user will keep the focus on other windows. If you want to make the user focus on your dialog only you should use #openModalWithSpec instead."
@@ -421,18 +427,6 @@ SpAbstractPresenter >> openModalWithSpec [
 SpAbstractPresenter >> openModalWithSpec: aSpecLayout [
 
 	^ self asModalWindow openWith: aSpecLayout
-]
-
-{ #category : #showing }
-SpAbstractPresenter >> openWithSpec [
-
-	^ self asWindow open
-]
-
-{ #category : #showing }
-SpAbstractPresenter >> openWithSpec: aSpecLayout [
-
-	^ self asWindow openWith: aSpecLayout
 ]
 
 { #category : #'private - showing' }

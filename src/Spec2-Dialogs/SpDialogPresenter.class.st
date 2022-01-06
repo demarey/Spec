@@ -57,22 +57,6 @@ SpDialogPresenter class >> addDocumentSectionFactoryMethod: aBuilder [
 	aBuilder text: '.'
 ]
 
-{ #category : #documentation }
-SpDialogPresenter class >> buildMicroDownUsing: aBuilder withComment: aString [
-	
-	super buildMicroDownUsing: aBuilder withComment: aString.
-	"Example code"
-	self addDocumentSectionExampleCode: aBuilder.
-	"Factory method"
-	self addDocumentSectionFactoryMethod: aBuilder.
-	"Sections"
-	self documentSections keysAndValuesDo: [ :label :methods |
-		self addDocumentSection: aBuilder label: label methods: methods ].
-	"Hierarchy"
-	"self addDocumentSectionHierarchy: aBuilder."
-
-]
-
 { #category : #accessing }
 SpDialogPresenter class >> defaultAcceptLabel [
 
@@ -123,7 +107,7 @@ SpDialogPresenter class >> documentSections [
 SpDialogPresenter class >> open [
 	<script>
 	
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #'instance creation' }

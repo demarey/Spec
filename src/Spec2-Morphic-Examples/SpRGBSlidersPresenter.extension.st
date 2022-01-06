@@ -6,7 +6,7 @@ SpRGBSlidersPresenter class >> example [
 	| example |
 	example := self new
 		extent: 300 @ 200;
-		openWithSpec;
+		open;
 		yourself.
 	example withWindowDo: [ :window | window title: 'RGBSliders example' ].
 	^ example

@@ -189,7 +189,7 @@ SpAbstractListPresenterTest >> testSetSortingBlockBeforeItems [
 { #category : #'tests - smoke' }
 SpAbstractListPresenterTest >> testSmokeOpenEmptyPresenter [
 
-	window := presenter openWithSpec
+	window := presenter open
 ]
 
 { #category : #'tests - smoke' }
@@ -197,7 +197,7 @@ SpAbstractListPresenterTest >> testSmokeOpenPresenterWithItems [
 
 	window := presenter
 		items: #(1 2 3);
-		openWithSpec.
+		open.
 ]
 
 { #category : #'tests - smoke' }

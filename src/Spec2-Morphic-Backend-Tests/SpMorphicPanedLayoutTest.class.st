@@ -31,7 +31,7 @@ SpMorphicPanedLayoutTest >> testListTakesAssignedSpace [
 		
 	list items: #(a).
 	
-	instance openWithSpec.
+	instance open.
 
 	self 
 		assert: list adapter widget container width 
@@ -50,7 +50,7 @@ SpMorphicPanedLayoutTest >> testReplacePresenter [
 		addSecond: (p2 := presenter newButton label: '2');
 		yourself).
 	
-	[ presenter openWithSpec ]
+	[ presenter open ]
 	ensure: [ presenter window close ].
 
 	p3 := presenter newLabel label: 'Test'.

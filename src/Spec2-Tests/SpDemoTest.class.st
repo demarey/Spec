@@ -15,7 +15,7 @@ SpDemoTest >> testSmokeTestForDemoPages [
 	"We could use #shouldnt:raise: but this way give us the stack of the error"
 	SpDemoPage availablePages
 		do: [ :demoPage | 
-			[ [ window := demoPage new openWithSpec ]
+			[ [ window := demoPage new open ]
 				on: Error
 				do: [ :e | 
 					self

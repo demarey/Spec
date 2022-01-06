@@ -9,5 +9,5 @@ SpSliderPresenter class >> example [
 		min: 0;
 		max: 100;
 		whenValueChangedDo: [ :value | slider label: value asString ];
-		openWithSpec
+		open
 ]

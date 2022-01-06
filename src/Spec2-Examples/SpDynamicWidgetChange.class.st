@@ -25,7 +25,7 @@ SpDynamicWidgetChange class >> defaultSpec [
 { #category : #examples }
 SpDynamicWidgetChange class >> example [
 	<sampleInstance>
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #accessing }
