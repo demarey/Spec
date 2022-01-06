@@ -26,7 +26,7 @@ SpVersatileDialogPresenterTest >> testListBox [
 	dialog addButton: #cancel text: 'Cancel' value: nil.
 	dialog mainIcon: (self iconNamed: #question).
 
-	dialog openModalWithSpec.
+	dialog openModal.
 	dialog withWindowDo: [ :w | w title: 'Confirmation' ].
 
 	dialog contentArea selection selectIndex: 2.
@@ -51,7 +51,7 @@ SpVersatileDialogPresenterTest >> testResult [
 	dialog mainIcon: (self iconNamed: #question).
 	dialog moreOptionsArea: (dialog newCheckBox label: 'Save header').
 
-	dialog openModalWithSpec. 
+	dialog openModal. 
 	dialog withWindowDo: [ :w | w title: 'Confirmation' ].
 	(dialog buttons at: #save) performAction.
 	dialog moreOptionsArea click.

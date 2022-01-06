@@ -78,7 +78,7 @@ SpConfirmDialog class >> exampleModal [
 		label: 'Are you sure?';
 		acceptLabel: 'Sure!';
 		cancelLabel: 'No, forget it';
-		openModalWithSpec.
+		openModal.
 	
 	self inform: (ok 
 		ifTrue: [ 'Yes!' ]
@@ -161,10 +161,10 @@ SpConfirmDialog >> label: aString [
 ]
 
 { #category : #'api - showing' }
-SpConfirmDialog >> openModalWithSpec [
+SpConfirmDialog >> openModal [
 	| dialog |
 	
-	dialog := super openModalWithSpec.
+	dialog := super openModal.
 	^ dialog isOk
 ]
 

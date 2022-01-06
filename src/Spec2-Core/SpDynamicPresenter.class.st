@@ -66,7 +66,7 @@ SpDynamicPresenter >> open [
 ]
 
 { #category : #api }
-SpDynamicPresenter >> openModalWithSpec [
+SpDynamicPresenter >> openModal [
 
 	self layout ifNil: [ ^ super open ].
 	^ self asModalWindow openWith: self layout

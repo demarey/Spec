@@ -418,7 +418,7 @@ SpAbstractPresenter >> openDialogWithSpec: aSpecLayout [
 ]
 
 { #category : #showing }
-SpAbstractPresenter >> openModalWithSpec [
+SpAbstractPresenter >> openModal [
 
 	^ self asModalWindow open
 ]

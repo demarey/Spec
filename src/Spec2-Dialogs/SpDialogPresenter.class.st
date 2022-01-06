@@ -121,7 +121,7 @@ SpDialogPresenter class >> openDialog [
 SpDialogPresenter class >> openModal [
 	<script>
 
-	^ self new openModalWithSpec
+	^ self new openModal
 ]
 
 { #category : #private }
@@ -198,10 +198,10 @@ SpDialogPresenter >> openDialogWithSpecParent: aWindow [
 ]
 
 { #category : #'api - showing' }
-SpDialogPresenter >> openModalWithSpec [
+SpDialogPresenter >> openModal [
 	"Open dialog in a modal way. "
 
-	^ super openModalWithSpec
+	^ super openModal
 ]
 
 { #category : #'api - showing' }
@@ -209,7 +209,7 @@ SpDialogPresenter >> openModalWithSpecParent: aWindow [
 	"Open dialog in a modal way, centering on parent window. "
 
 	parentWindow := aWindow.
-	^ self openModalWithSpec
+	^ self openModal
 ]
 
 { #category : #accessing }

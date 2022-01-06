@@ -68,7 +68,7 @@ SpRequestDialog class >> exampleModal [
 		text: 'I am tempted to say 42...';
 		acceptLabel: 'I know!';
 		cancelLabel: 'Cancel';
-		openModalWithSpec.
+		openModal.
 		
 	string ifNotNil: [ 
 		self inform: string ]
@@ -157,10 +157,10 @@ SpRequestDialog >> label: aString [
 ]
 
 { #category : #'api - showing' }
-SpRequestDialog >> openModalWithSpec [
+SpRequestDialog >> openModal [
 	| dialog |
 	
-	dialog := super openModalWithSpec.
+	dialog := super openModal.
 	^ dialog isOk
 		ifTrue: [ self text trimmed ]
 		ifFalse: [ nil ]
