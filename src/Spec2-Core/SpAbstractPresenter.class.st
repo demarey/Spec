@@ -215,7 +215,14 @@ SpAbstractPresenter >> defaultDialogWindowPresenterClass [
 { #category : #initialization }
 SpAbstractPresenter >> defaultLayout [
 	
+	self 
+		deprecated: '#defaultSpec class side method has been deprecated in Spec. Please define a #defaultLayout method instance side.' 
+		on: '2022-02-06' 
+		in: 'Pharo10'.
+		
 	^ self retrieveLayout: #defaultSpec
+	
+	"Will be 'self subclassResponsibility' after deprecation removal"
 ]
 
 { #category : #'private - showing' }
