@@ -424,7 +424,7 @@ SpAbstractPresenter >> openModal [
 ]
 
 { #category : #showing }
-SpAbstractPresenter >> openModalWithSpec: aSpecLayout [
+SpAbstractPresenter >> openModalWithLayout: aSpecLayout [
 
 	^ self asModalWindow openWith: aSpecLayout
 ]
