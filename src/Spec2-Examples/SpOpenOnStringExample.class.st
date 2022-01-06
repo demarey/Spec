@@ -85,9 +85,9 @@ SpOpenOnStringExample >> connectPresenters [
 	input whenTextChangedDo: [ :text | label label: text ].
 	check
 		whenActivatedDo: [ self needRebuild: false.
-			self buildWithSpecLayout: self class defaultSpec ];
+			self buildWithLayout: self class defaultSpec ];
 		whenDeactivatedDo: [ self needRebuild: false.
-			self buildWithSpecLayout: self class bottomLayout ]
+			self buildWithLayout: self class bottomLayout ]
 ]
 
 { #category : #initialization }

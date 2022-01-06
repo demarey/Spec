@@ -103,7 +103,7 @@ SpMorphicNotebookAdapter >> ensurePage: aPage isBuiltWithPresenter: presenter [
 	presenter owner: self presenter. 
 	aPage layoutSpec
 		ifNil: [ presenter buildWithSpec ]
-		ifNotNil: [ :spec | presenter buildWithSpecLayout: (self perform: spec) ]
+		ifNotNil: [ :spec | presenter buildWithLayout: (self perform: spec) ]
 ]
 
 { #category : #initialization }

@@ -11,7 +11,7 @@ Class {
 SpMorphicWorldAdapter >> addPresenterIn: widgetToBuild withSpecLayout: aSpec [
 
 	self 
-		addContent: (self model presenter buildWithSpecLayout: aSpec) 
+		addContent: (self model presenter buildWithLayout: aSpec) 
 		toWindow: widgetToBuild
 ]
 

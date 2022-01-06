@@ -52,7 +52,7 @@ SpWindowPresenterTest >> testIsTopWindow [
 SpWindowPresenterTest >> testRebuildPresenterDoNotLetReferencesInAnnouncer [
 	| oldSize newSize |
 	
-	presenter buildWithSpecLayout: SpLabelPresenter defaultSpec.
+	presenter buildWithLayout: SpLabelPresenter defaultSpec.
 	oldSize := presenter announcer subscriptions subscriptions size.
 	"rebuild"
 	presenter rebuildWithSpecLayout: SpLabelPresenter defaultSpec.

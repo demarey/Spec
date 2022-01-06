@@ -219,10 +219,10 @@ SpAbstractWidgetPresenter >> addDeferredAction: aBlock [
 ]
 
 { #category : #'private - building' }
-SpAbstractWidgetPresenter >> basicBuildAdapterWithSpecLayout: aSpecLayout [
+SpAbstractWidgetPresenter >> basicBuildAdapterWithLayout: aSpecLayout [
 	| builtAdapter |
 
-	builtAdapter := super basicBuildAdapterWithSpecLayout: aSpecLayout.
+	builtAdapter := super basicBuildAdapterWithLayout: aSpecLayout.
 	self processDeferredActions.
 	^ builtAdapter
 ]

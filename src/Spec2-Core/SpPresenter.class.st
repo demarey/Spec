@@ -213,7 +213,7 @@ SpPresenter >> aboutText [
 SpPresenter >> addAll: aWindow withSpecLayout: aSpec [
 
 	aWindow
-		addMorph: (self buildWithSpecLayout: aSpec)
+		addMorph: (self buildWithLayout: aSpec)
 		frame: (0@0 corner: 1@1).
 ]
 
@@ -342,11 +342,11 @@ SpPresenter >> askOkToClose [
 ]
 
 { #category : #'private - building' }
-SpPresenter >> basicBuildAdapterWithSpecLayout: aSpecLayout [
+SpPresenter >> basicBuildAdapterWithLayout: aSpecLayout [
 
 	layout == aSpecLayout 
 		ifFalse: [ layout := aSpecLayout ].
-	^ super basicBuildAdapterWithSpecLayout: aSpecLayout
+	^ super basicBuildAdapterWithLayout: aSpecLayout
 ]
 
 { #category : #'api - shortcuts' }

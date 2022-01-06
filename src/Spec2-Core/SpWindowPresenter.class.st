@@ -149,7 +149,7 @@ SpWindowPresenter >> buildWindowWithLayout: windowSpecLayout presenterLayout: pr
 ]
 
 { #category : #'private - building' }
-SpWindowPresenter >> buildWithSpecLayout: aSpecLayout [
+SpWindowPresenter >> buildWithLayout: aSpecLayout [
 	
 	^ SpBindings 
 		value: self application adapterBindings
@@ -455,7 +455,7 @@ SpWindowPresenter >> openWith: aSpecLayout [
 { #category : #'private - showing' }
 SpWindowPresenter >> openWithSpecLayout: aSpecLayout [
 
-	self buildWithSpecLayout: aSpecLayout.
+	self buildWithLayout: aSpecLayout.
 	self application registerWindow: self.
 	self withAdapterDo: [ :anAdapter | anAdapter open ].
 	self allPresenters do: [ :each | each announceDisplayed ].

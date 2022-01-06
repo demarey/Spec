@@ -153,7 +153,7 @@ SpAbstractPresenter >> autoAccept: aBoolean [
 ]
 
 { #category : #'private - building' }
-SpAbstractPresenter >> basicBuildAdapterWithSpecLayout: aSpecLayout [
+SpAbstractPresenter >> basicBuildAdapterWithLayout: aSpecLayout [
 	"I assume the SpecBindings is well defined"
 	
 	self announcer announce: (SpWidgetWillBeBuilt model: self).
@@ -170,34 +170,34 @@ SpAbstractPresenter >> basicBuildAdapterWithSpecLayout: aSpecLayout [
 ]
 
 { #category : #'private - building' }
-SpAbstractPresenter >> buildAdapterWithSpecLayout: aSpecLayout [
+SpAbstractPresenter >> buildAdapterWithLayout: aSpecLayout [
 	"Build the adapter using the spec name provided as argument"
 	
 	^ SpBindings 
 		value: self application adapterBindings
-		during: [ self basicBuildAdapterWithSpecLayout: aSpecLayout ]
+		during: [ self basicBuildAdapterWithLayout: aSpecLayout ]
+]
+
+{ #category : #building }
+SpAbstractPresenter >> buildWithLayout: aSpecLayout [
+	"Build the widget using the spec name provided as argument"
+
+	^ (self buildAdapterWithLayout: aSpecLayout) widget
+]
+
+{ #category : #building }
+SpAbstractPresenter >> buildWithSelector: aSelector [
+	"Build the widget using the layout returned by the evaluation 
+	of the selector name provided as argument"
+
+	^ self buildWithLayout: (self retrieveSpec: aSelector)
 ]
 
 { #category : #building }
 SpAbstractPresenter >> buildWithSpec [
 	"Build the widget using the default layout"
 	
-	^ self buildWithSpecLayout: self layout
-]
-
-{ #category : #building }
-SpAbstractPresenter >> buildWithSpecLayout: aSpecLayout [
-	"Build the widget using the spec name provided as argument"
-
-	^ (self buildAdapterWithSpecLayout: aSpecLayout) widget
-]
-
-{ #category : #building }
-SpAbstractPresenter >> buildWithSpecSelector: aSelector [
-	"Build the widget using the layout returned by the evaluation 
-	of the selector name provided as argument"
-
-	^ self buildWithSpecLayout: (self retrieveSpec: aSelector)
+	^ self buildWithLayout: self layout
 ]
 
 { #category : #'private - showing' }
