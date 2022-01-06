@@ -199,7 +199,7 @@ SpMorphicBoxLayoutTest >> testLayoutHeightTakesAllSpaceNeeded [
 	
 	presenter 
 		layout: layout;
-		buildWithSpec.
+		build.
 	
 	self assert: presenter adapter widget height >= (string lines size * string asMorph height).
 ]
@@ -238,7 +238,7 @@ SpMorphicBoxLayoutTest >> testPresenterTakesRightHeight [
 			add: (l1 := (presenter newLabel label: 'Line 1')) expand: false;
 			add: (l2 := (presenter newLabel label: 'Line 2')) expand: false).
 	
-	presenter buildWithSpec.	
+	presenter build.	
 	
 	self 
 		assert: presenter adapter widget height 

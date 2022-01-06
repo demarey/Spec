@@ -9,19 +9,19 @@ SpPresenterBuildTest >> testBuildPresenterWillSetPresenterProperty [
 	| presenter |
 	
 	presenter := SpPresenter new layout: SpBoxLayout newVertical; yourself.
-	presenter buildWithSpec.
+	presenter build.
 	self 
 		assert: presenter adapter widget presenter
 		equals: presenter.
 
 	presenter := SpPresenter new layout: SpPanedLayout newVertical; yourself.
-	presenter buildWithSpec.
+	presenter build.
 	self 
 		assert: presenter adapter widget presenter
 		equals: presenter.
 
 	presenter := SpPresenter new layout: SpGridLayout new; yourself.
-	presenter buildWithSpec.
+	presenter build.
 	self 
 		assert: presenter adapter widget presenter
 		equals: presenter
@@ -39,7 +39,7 @@ SpPresenterBuildTest >> testBuildWidgetPresenterWillSetPresenterProperty [
 			and: [ each isWindow not ] ] ]
 		thenDo: [ :aClass | | presenter | 
 			presenter := aClass sampleInstanceForTest.
-			presenter buildWithSpec.
+			presenter build.
 			presenter adapter widget isMorph ifTrue: [  
 				self 
 					assert: presenter adapter widget presenter

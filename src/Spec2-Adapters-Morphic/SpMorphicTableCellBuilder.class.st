@@ -158,7 +158,7 @@ SpMorphicTableCellBuilder >> visitCheckboxColumn: aTableColumn [
 	aTableColumn onDeactivation ifNotNil: [ :valuable | 
 		presenter whenDeactivatedDo: [ valuable cull: self item ] ].
 
-	morph := presenter buildWithSpec.
+	morph := presenter build.
 	presenter adapter applyStyle: morph.
 
 	self 
@@ -216,7 +216,7 @@ SpMorphicTableCellBuilder >> visitLinkColumn: aTableColumn [
 	aTableColumn action 
 		ifNotNil: [ presenter action: [ aTableColumn action value: self item ] ].
 
-	morph := presenter buildWithSpec.
+	morph := presenter build.
 	presenter adapter applyStyle: morph.
 
 	self 
@@ -260,7 +260,7 @@ SpMorphicTableCellBuilder >> visitStringColumnEditable: aTableColumn on: content
 			valuable cull: self item cull: aString ] ].
 	
 	"add cell"
-	morph := presenter buildWithSpec.
+	morph := presenter build.
 	presenter adapter applyStyle.
 	self addCellMorph: morph column: aTableColumn
 ]

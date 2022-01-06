@@ -65,6 +65,12 @@ SpMorphicLayoutAdapter >> basicAdd: aPresenter constraints: constraints to: aPan
 	self subclassResponsibility
 ]
 
+{ #category : #building }
+SpMorphicLayoutAdapter >> build [
+	
+	^ self widget
+]
+
 { #category : #private }
 SpMorphicLayoutAdapter >> buildMorph: aPresenter constraints: constraints [ 
 	| childMorph |
@@ -93,13 +99,7 @@ SpMorphicLayoutAdapter >> buildWidget [
 { #category : #building }
 SpMorphicLayoutAdapter >> buildWithSelector: aSelector [ 
 
-	^ self buildWithSpec
-]
-
-{ #category : #building }
-SpMorphicLayoutAdapter >> buildWithSpec [
-	
-	^ self widget
+	^ self build
 ]
 
 { #category : #accessing }

@@ -72,7 +72,7 @@ SpMorphicListDataSource >> menuColumn: column row: rowIndex [
 			m := menuPresenter value.
 			m isMorph 
 				ifTrue: [ m ]
-				ifFalse: [ m buildWithSpec ] ]
+				ifFalse: [ m build ] ]
 ]
 
 { #category : #accessing }
@@ -128,7 +128,7 @@ SpMorphicListDataSource >> transferFor: passenger from: aMorph [
 	^ (self model adapter 
 		transferFor: passenger 
 		from: self table) 
-		buildWithSpec
+		build
 		  dragHand: aMorph currentHand;
 		  yourself
 ]

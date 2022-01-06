@@ -78,7 +78,7 @@ SpMorphStyleTest >> testFromStylesheetAdapter [
 	| lookup labelAdapter |
 
 	labelAdapter := SpLabelPresenter new 
-		buildWithSpec;
+		build;
 		adapter.
 
 	lookup := SpMorphStyle
@@ -133,7 +133,7 @@ SpMorphStyleTest >> testNestedStyles [
 
 	"No nesting"
 	labelAdapter := SpLabelPresenter new 
-		buildWithSpec;
+		build;
 		adapter.
 	lookup := SpMorphStyle fromStylesheet: styleSheet adapter: labelAdapter.
 	self assert: lookup width equals: 21.
@@ -141,7 +141,7 @@ SpMorphStyleTest >> testNestedStyles [
 	"nesting"			
 	labelAdapter := SpLabelPresenter new 
 		addStyle: 'nested';
-		buildWithSpec;
+		build;
 		adapter.
 	lookup := SpMorphStyle fromStylesheet: styleSheet adapter: labelAdapter.
 	self assert: lookup width equals: 42.
@@ -149,7 +149,7 @@ SpMorphStyleTest >> testNestedStyles [
 	"deep-nesting"			
 	labelAdapter := SpLabelPresenter new 
 		addStyle: 'nested.deepNested';
-		buildWithSpec;
+		build;
 		adapter.
 	lookup := SpMorphStyle fromStylesheet: styleSheet adapter: labelAdapter.
 	self assert: lookup width equals: 84
@@ -181,7 +181,7 @@ SpMorphStyleTest >> testTwoClassWithSameName [
 	.label [ 
 		Font { #bold: true } ] ]'.
 
-	label := SpLabelPresenter new buildWithSpec; yourself.
+	label := SpLabelPresenter new build; yourself.
 	
 	morphStyle := SpMorphStyle fromStylesheet: style1 adapter: label adapter.
 	property := morphStyle mergedProperties anyOne.

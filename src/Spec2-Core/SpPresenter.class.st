@@ -896,7 +896,7 @@ SpPresenter >> update [
 	while it works on morphic backend in certain cases, it will not translate correctly and 
 	it will cause memory leaks'.  "
 	self needRebuild: false.
-	self buildWithSpec
+	self build
 ]
 
 { #category : #initialization }

@@ -169,6 +169,13 @@ SpAbstractPresenter >> basicBuildAdapterWithLayout: aSpecLayout [
 	^ adapter
 ]
 
+{ #category : #building }
+SpAbstractPresenter >> build [
+	"Build the widget using the default layout"
+	
+	^ self buildWithLayout: self layout
+]
+
 { #category : #'private - building' }
 SpAbstractPresenter >> buildAdapterWithLayout: aSpecLayout [
 	"Build the adapter using the spec name provided as argument"
@@ -191,13 +198,6 @@ SpAbstractPresenter >> buildWithSelector: aSelector [
 	of the selector name provided as argument"
 
 	^ self buildWithLayout: (self retrieveLayout: aSelector)
-]
-
-{ #category : #building }
-SpAbstractPresenter >> buildWithSpec [
-	"Build the widget using the default layout"
-	
-	^ self buildWithLayout: self layout
 ]
 
 { #category : #'private - showing' }

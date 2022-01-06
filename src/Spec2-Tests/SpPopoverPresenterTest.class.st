@@ -21,7 +21,7 @@ SpPopoverPresenterTest >> initializeTestedInstance [
 	 will be correctly tested"
 	presenter owner: ((ownerPresenter := SpPresenter new)
 		layout: SpBoxLayout newTopToBottom;
-		buildWithSpec;
+		build;
 		yourself).
 		
 	presenter presenter: (SpPresenter new 

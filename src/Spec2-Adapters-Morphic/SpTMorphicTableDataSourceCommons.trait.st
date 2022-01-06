@@ -36,7 +36,7 @@ SpTMorphicTableDataSourceCommons >> menuColumn: column row: rowIndex [
 	menuPresenter ifNil: [ ^ nil ].
 	^ SpBindings
 		value: self model application adapterBindings
-		during: [ menuPresenter value buildWithSpec ]
+		during: [ menuPresenter value build ]
 ]
 
 { #category : #accessing }

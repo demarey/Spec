@@ -130,7 +130,7 @@ SpMorphicCodeAdapter >> insertPopoverAfterCurrentSelection: aPresenter style: st
 			
 		styleName ifNotNil: [ 
 			popover addStyle: styleName ].
-		popover buildWithSpec.
+		popover build.
 		"popover style needs to be applied when poping up. 
 		 Do not apply it here! (I am letting it here as documentation)"
 		"popover adapter applyStyle."

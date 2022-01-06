@@ -37,7 +37,7 @@ SpMockDynamicPresenter >> connectPresenters [
 			label := self newLabel.
 			label label: sel selectedItem asString.
 			self needRebuild: false.
-			self buildWithSpec ]
+			self build ]
 ]
 
 { #category : #initialization }

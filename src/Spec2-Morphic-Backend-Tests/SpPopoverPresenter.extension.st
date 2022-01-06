@@ -5,7 +5,7 @@ SpPopoverPresenter class >> sampleInstanceForTest [
 
 	^ super sampleInstanceForTest
 		relativeTo: (SpButtonPresenter new
-			buildWithSpec; 
+			build; 
 			yourself);
 		presenter: SpLabelPresenter new;
 		yourself

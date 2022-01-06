@@ -55,7 +55,7 @@ SpComponentListDataSource >> menuColumn: column row: rowIndex [
 			m := menuPresenter value.
 			m isMorph 
 				ifTrue: [ m ]
-				ifFalse: [ m buildWithSpec ] ]
+				ifFalse: [ m build ] ]
 ]
 
 { #category : #accessing }
@@ -113,7 +113,7 @@ SpComponentListDataSource >> transferFor: passenger from: aMorph [
 	^ (self model adapter 
 		transferFor: passenger 
 		from: self table) 
-		buildWithSpec
+		build
 ]
 
 { #category : #private }
@@ -121,7 +121,7 @@ SpComponentListDataSource >> widgetFor: aPresenter [
 	| widget |
 
 	aPresenter adapter ifNotNil: [ :adapter | ^ adapter widget ].
-	widget := aPresenter buildWithSpec
+	widget := aPresenter build
 		vResizing: #shrinkWrap;
 		yourself.
 	aPresenter adapter applyStyle: widget. 

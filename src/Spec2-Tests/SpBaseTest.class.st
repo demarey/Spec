@@ -142,10 +142,10 @@ SpBaseTest >> testOpenPresenterRaisesDisplayEvent [
 SpBaseTest >> testRebuildPresenterDoNotLetReferencesInAnnouncer [
 	| oldSize newSize |
 	
-	presenter buildWithSpec.
+	presenter build.
 	oldSize := presenter announcer subscriptions subscriptions size.
 	"rebuild"
-	presenter buildWithSpec.
+	presenter build.
 	newSize := presenter announcer subscriptions subscriptions size.
 	
 	self assert: oldSize equals: newSize

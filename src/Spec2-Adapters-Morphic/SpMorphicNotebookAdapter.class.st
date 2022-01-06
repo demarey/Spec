@@ -67,7 +67,7 @@ SpMorphicNotebookAdapter >> buildLabelForPage: aPage [
 	| labelPresenter labelMorph |
 
 	labelPresenter := aPage labelPresenterFor: self presenter.
-	labelMorph := labelPresenter buildWithSpec.
+	labelMorph := labelPresenter build.
 	labelPresenter adapter applyStyle.
 	
 	^ labelMorph
@@ -102,7 +102,7 @@ SpMorphicNotebookAdapter >> ensurePage: aPage isBuiltWithPresenter: presenter [
 	"if not built or not same owner, I need to rebuild"		
 	presenter owner: self presenter. 
 	aPage layoutSpec
-		ifNil: [ presenter buildWithSpec ]
+		ifNil: [ presenter build ]
 		ifNotNil: [ :spec | presenter buildWithLayout: (self perform: spec) ]
 ]
 
