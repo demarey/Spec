@@ -6,8 +6,8 @@ From a Spec2 users, my key methods are
 - `SpAbstractPresenter>>#application` to get access to the application into which I play.
 - `SpAbstractPresenter>>#initializeDialogWindow:` defines the default buttons that decorated a dialog. Subclasses can override it to be able to customize how dialog get decorated.
 - `SpAbstractPresenter>>#initializeWindow:` is a hook to define the window title and extend.
-- `SpAbstractPresenter>>#openWithSpec` to open the receiver with the default layout. 
-- `SpAbstractPresenter>>#openWithSpec: aSpecLayout` to open the receiver with the specified layout.
+- `SpAbstractPresenter>>#open` to open the receiver with the default layout. 
+- `SpAbstractPresenter>>#openWithLayout: aSpecLayout` to open the receiver with the specified layout.
 "
 Class {
 	#name : #SpAbstractPresenter,

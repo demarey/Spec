@@ -23,9 +23,9 @@ On my class side, I provide methods returning standard height and width for some
 
 ## Window
 
-- `SpPresenter>>#openWithSpec` instantiates a `SpWindowPresenter` using the lookup to found the layout to use.
-- `SpPresenter>>#openDialogWithSpec` instanciates a `SpDialogWindowPresenter` using the lookup to found the layout to use.
-Their variants `openWithSpec:` and `openDialogWithSpec:` use the layout parameter.
+- `SpPresenter>>#open` instantiates a `SpWindowPresenter` using the lookup to found the layout to use.
+- `SpPresenter>>#openDialog` instanciates a `SpDialogWindowPresenter` using the lookup to found the layout to use.
+Their variants `openWithLayout:` and `openDialogWithLayout:` use the layout parameter.
 
 These methods can be useful to manage the window
 - `SpPresenter>>#isDisplayed` returns true if the window of the widget is displayed
@@ -60,25 +60,9 @@ Normally in Spec initializing instance variables should be done BEFORE calling `
 
 As a general principle refer to the subclasses of`SpExecutableLayout`.
 
-`defaultSpec` or a method containing the pragma `<spec: #default>` must be defined in the class side of my subclasses.
+`defaultLayout` must be defined in the instance side of my subclasses.
 It contains information about how visually position its elements.
-It possible to define more than one method to give the possibility to use another layout, by default the one containing the pragma will be used if it exists, if not `defaultSpec` will be used.
-
-Developer may also want to define instance level layouts. A good idiom is the following one:
-
-```
-SpMyPresenter >> initializePresenters
-	... instantiate presenters ...
-	self initializeLayout
-```
-
-```
-SpMyPresenter >> initializeLayout
-	self layout: (SpXXLayout new add: ...; yourself)
-```
-
-
-
+It is possible to define more than one method to give the possibility to use another layout, by default the one named `defaultLayout` will be used.
 
 "
 Class {
