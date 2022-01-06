@@ -430,7 +430,7 @@ SpAbstractPresenter >> openModalWithLayout: aSpecLayout [
 ]
 
 { #category : #'private - showing' }
-SpAbstractPresenter >> openWithSpecLayout: aSpecLayout [
+SpAbstractPresenter >> openWithLayout: aSpecLayout [
 
 	^ self asWindow openWith: aSpecLayout
 ]

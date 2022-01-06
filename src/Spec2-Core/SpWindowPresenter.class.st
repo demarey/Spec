@@ -449,11 +449,11 @@ SpWindowPresenter >> open [
 { #category : #'api - showing' }
 SpWindowPresenter >> openWith: aSpecLayout [
 
-	self openWithSpecLayout: aSpecLayout
+	self openWithLayout: aSpecLayout
 ]
 
 { #category : #'private - showing' }
-SpWindowPresenter >> openWithSpecLayout: aSpecLayout [
+SpWindowPresenter >> openWithLayout: aSpecLayout [
 
 	self buildWithLayout: aSpecLayout.
 	self application registerWindow: self.
