@@ -114,7 +114,7 @@ SpDialogPresenter class >> open [
 SpDialogPresenter class >> openDialog [
 	<script>
 	
-	^ self new openDialogWithSpec
+	^ self new openDialog
 ]
 
 { #category : #'instance creation' }
@@ -183,10 +183,10 @@ SpDialogPresenter >> onCancel: aBlock [
 ]
 
 { #category : #'api - showing' }
-SpDialogPresenter >> openDialogWithSpec [
+SpDialogPresenter >> openDialog [
 	"Open dialog in a non-modal way."
 
-	^ super openDialogWithSpec
+	^ super openDialog
 ]
 
 { #category : #'api - showing' }
@@ -194,7 +194,7 @@ SpDialogPresenter >> openDialogWithSpecParent: aWindow [
 	"Open dialog in a non-modal way, centering on parent window. "
 	
 	parentWindow := aWindow.
-	^ self openDialogWithSpec
+	^ self openDialog
 ]
 
 { #category : #'api - showing' }

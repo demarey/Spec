@@ -26,7 +26,7 @@ SpApplicationTest >> testCloseDialogWindowRemovesItFromWindowCollection [
 	| window |
 
 	application := SpApplication new.
-	window := (application newPresenter: SpButtonPresenter) openDialogWithSpec.
+	window := (application newPresenter: SpButtonPresenter) openDialog.
 	window close.
 	self deny: (application windows includes: window)
 ]
@@ -58,7 +58,7 @@ SpApplicationTest >> testNewPresenter [
 { #category : #tests }
 SpApplicationTest >> testOpenDialogWindowAddsItToWindowCollection [
 	| window |
-	window := (application newPresenter: SpButtonPresenter) openDialogWithSpec.
+	window := (application newPresenter: SpButtonPresenter) openDialog.
 	
 	self assert: (application windows includes: window)
 ]

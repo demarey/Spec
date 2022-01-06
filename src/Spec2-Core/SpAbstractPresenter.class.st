@@ -391,7 +391,7 @@ SpAbstractPresenter >> openBlockedDialogWithSpec: aSelector [
 ]
 
 { #category : #showing }
-SpAbstractPresenter >> openDialogWithSpec [
+SpAbstractPresenter >> openDialog [
 	"Build the widget using the default spec and display it into a dialog. 
 	 Beware: this way will not create a real modal in the sense that the user will keep the focus on other windows. If you want to make the user focus on your dialog only you should use #openModalWithSpec instead."
 	
